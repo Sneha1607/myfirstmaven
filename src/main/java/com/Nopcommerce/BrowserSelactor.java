@@ -14,8 +14,8 @@ public class BrowserSelactor extends BasePage
     public void browser()
     {
         loadProp load = new loadProp();
-//        String browser = load.getProperty("browser");
-        String browser = System.getProperty("browser");
+        String browser = load.getProperty("browser");
+       //String browser = System.getProperty("browser");
 
         if (browser.equalsIgnoreCase("firefox"))
         {

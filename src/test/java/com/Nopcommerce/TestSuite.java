@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 /**
  * Created by user on 4/8/2017.
  */
-public class TestSuite extends BaseTest
+public class TestSuite
 {
     HomePage homePage = new HomePage();
     RegisterPage registerPage = new RegisterPage();

@@ -1,5 +1,6 @@
 package com.Nopcommerce;
 
+import cucumber.api.java.Before;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -14,12 +15,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class BaseTest extends BasePage{
 
-    @BeforeMethod
+    BrowserSelactor browserSelactor = new BrowserSelactor();
+    @Before
     public  void  openBrowser()
     {
-        //driver = new FirefoxDriver();
-        BrowserSelactor browserSelactor = new BrowserSelactor();
-        browserSelactor.browser();
+       // driver = new FirefoxDriver();
+
+       browserSelactor.browser();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("http://demo.nopcommerce.com/");
